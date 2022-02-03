@@ -74,6 +74,17 @@ import time
 #  if 0 < a < 5:
 #      print("a is in range")
 
-a = [[1, 2, 3], [4, 5, 6]]
+#  from collections import deque
+#
+#  queue = deque([1,2])
+#  print("queue", queue)
+#  data = queue.popleft()
+#
+#  print("queue", queue)
+#  print(data)
 
-print(a[0][0])
+i = 0
+while (i < i + 1):
+    time.sleep(1)
+    i = i + 1
+    print(i)

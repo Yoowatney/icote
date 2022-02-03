@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# 몇 번 더 풀어봐야함
 
 import sys
 from time import sleep
