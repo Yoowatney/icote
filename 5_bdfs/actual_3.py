@@ -23,7 +23,6 @@ def dfs(graph, row, col, visited):
     if (col + 1 < m and not visited[row][col + 1]):
         dfs(graph, row, col + 1, visited)
     return (1) # not visited[row][col], row + 1 >=n or visited[row + 1][col]
-
     if (row + 1 < n and col + 1 < m):
         if (not visited[row + 1][col] or not visited[row][col + 1]):
             dfs(graph, row + 1, col, visited)
