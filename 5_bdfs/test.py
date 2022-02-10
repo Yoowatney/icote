@@ -73,8 +73,12 @@
 # print(a)
 # print(b)
 
-import copy 
-arr1 = [1, 2, [99, 88, 77], 3]
-arr2 = copy.deepcopy(arr1) 
+# import copy 
+#
+# arr1 = [1, 2, [99, 88, 77], 3]
+# arr2 = copy.deepcopy(arr1) 
+#
+# print(arr2)
 
-print(arr2)
+print(len([1,2,3]))
+
