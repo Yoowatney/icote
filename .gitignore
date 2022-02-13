@@ -1,2 +1,6 @@
 .vim
 tags
+
+algo/baekjoon/input.txt
+algo/baekjoon/output.txt
+algo/baekjoon/test.py
