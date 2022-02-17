@@ -21,6 +21,7 @@ for _ in range(int(input())):
     count_lists.append(_list)
 
 ret = 0
+print(count_lists)
 for count_list in count_lists:
     val = max(count_list)
     temp = 0
