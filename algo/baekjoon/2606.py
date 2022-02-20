@@ -4,41 +4,56 @@
 # from pprint import pprint
 from collections import deque
 
-def dfs(g, n, visited):
-    if visited[n]:
-        return
-    visited[n] = True
-    global count
-    count += 1
-    for i in g[n]:
-        dfs(g, i, visited)
-
+# def dfs(g, n, visited):
+#     if visited[n]:
+#         return
+#     visited[n] = True
+#     global count
+#     count += 1
+#     for i in g[n]:
+#         dfs(g, i, visited)
+#
 n = int(input())
 g = [[] for _ in range(n + 1)]
-visited = [False] * (n + 1)
 
 for _ in range(int(input())):
     i, val = map(int, input().split())
     g[i].append(val)
     g[val].append(i)
+
 count = 0
+distance = [0] * (n + 1)
+visited = [False] * (n + 1)
 
 def bfs(g, n, visited):
-    visited[n] = True
-    dq = deque([n])
-    global count
-    while (dq):
-        i = dq.popleft()
+    visited[n] = True 
+    distance[n] = 0 # list는 전역변수 선언 안해도 됨?
+    q = deque([n])
+    count = 0
+    while (q):
+        val = q.popleft() # 이름 명명 뭐로하면 좋을지.. cur_node
         count += 1
-        for val in g[i]:
-            if (not visited[val]):
-                visited[val] = True
-                dq.append(val)
-count = 0
+        for i in g[val]: # 이름 명명 뭐로하면 좋을지.. link_node
+            if not visited[i]: # 이름 명명 뭐로하면 좋을지..
+                q.append(i)
+                visited[i] = True
+    return count
+
+# def bfs(g, n, visited): # global쓰지말고 다시 푸세용!
+#     visited[n] = True
+#     dq = deque([n])
+#     global count
+#     while (dq):
+#         i = dq.popleft()
+#         count += 1
+#         for val in g[i]:
+#             if (not visited[val]):
+#                 visited[val] = True
+#                 dq.append(val)
 # dfs(g, 1, visited)
 # print(visited.count(True) - 1)
-bfs(g, 1, visited)
-print(count - 1)
+
+print(bfs(g, 1, visited) - 1)
 
 
 # n = int(input()) # 컴퓨터의 수
