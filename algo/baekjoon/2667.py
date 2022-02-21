@@ -18,6 +18,8 @@ def dfs(i, j, m):
     dfs(i, j - 1, m)
     return 1
 
+# cnt : 단지에 속하는 집 수 count
+# count : 단지 개수
 n = int(input())
 m = [list(map(int, input())) for _ in range(n)]
 
