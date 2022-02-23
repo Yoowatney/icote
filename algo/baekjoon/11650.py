@@ -10,6 +10,7 @@ arr.sort()
 for a,b in arr:
     print(a, b)
 
+
 # for _ in range(n):
 #     arr.append(list(map(int, input().split(' '))))
 
