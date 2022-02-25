@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 n = int(input())
 
 d = list(map(int, input().split()))
@@ -13,6 +14,24 @@ for i in range(1, n + 1):
     else:
         f[i] = max(f[1:i-1]) + d[i]
 print(f)
+=======
+# n = int(input())
+#
+# d = list(map(int, input().split()))
+# d.insert(0, 0)
+#
+# f = [0] * (n + 1)
+#
+# for i in range(1, n + 1):
+#     if i == 1:
+#         f[1] = d[1]
+#     elif i == 2:
+#         f[2] = d[2]
+#     else:
+#         f[i] = max(f[1:i-1]) + d[i]
+# print(f)
+
+>>>>>>> c73a96a (dp gogo)
 
 n = int(input())
 arr = list(map(int, input().split()))
