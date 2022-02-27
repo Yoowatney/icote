@@ -1,4 +1,6 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python2
 
 x,y,w,h = map(int, input().split(' '))
 print(min(w - x, x, y, h -y))
+
+

@@ -6,7 +6,7 @@
 
 #### [2. 참고 블로그](https://covenant.tistory.com/235)
 
-#### [~~3. 문풀 참고 강의~~](https://www.youtube.com/channel/UCUxQp32ZsyJnLxvFnwul2lQ/playlists)
+#### [3. 문풀 참고 강의](https://www.youtube.com/channel/UCUxQp32ZsyJnLxvFnwul2lQ/playlists)
 
 ## 문제 list
 
@@ -19,4 +19,4 @@
 
 
 *문제 리스트는 계속해서 추가 예정*  
-~~이코테 책은 추후에~~
+*이코테 책은 노션에 정리*
