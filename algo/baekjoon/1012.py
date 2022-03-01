@@ -1,9 +1,12 @@
 import sys
 from collections import deque
+
+
 # sys.setrecursionlimit(10000)
 # from pprint import pprint
 # from copy import deepcopy
 # from time import sleep
+
 
 input = sys.stdin.readline
 
@@ -29,6 +32,7 @@ def bfs(y, x):
             if (0 <= nx < w and 0 <= ny < h and g[ny][nx] == 1):
                 q.append((cur_y + way[0], cur_x + way[1]))
                 g[ny][nx] = 0
+
 for _ in range(int(input())):
     # g = make_array()
     w, h, k = map(int, input().split())
