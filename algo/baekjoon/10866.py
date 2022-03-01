@@ -3,7 +3,6 @@ import sys
 input = sys.stdin.readline
 
 q = deque()
-
 def command(c, n):
     if c[0] == "s":
         print(len(q))
