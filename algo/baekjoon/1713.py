@@ -5,9 +5,6 @@
 
 # a.sort(key=lambda x:(x.items()))
 
-
-
-
 # d = {i : 0 for i in range(1, 101)}
 # size = int(input())  # 3
 # int(input()) # 9
@@ -21,45 +18,80 @@
 
 from collections import deque
 
-def swapByTable(table, a):
-    for i in range(size):
-        for j in range(i + 1, size):
-            if (table[a[i]] > table[a[j]]):
-                a[i], a[j] = a[j], a[i]
-
-def back(table, a, i):
-    temp = 0
-    for k in range(size):
-        if table[a[k]] == i:
-            temp = k
-    # for k in a:
-    #     if table[k] == i:
-    #         temp = k
-    return temp
-
 size = int(input())
 int(input())
 
-table = [0] * 101
 
-a = []
+picture = deque()
+count = 0
+for num in map(int, input().split()):
+    temp = []
+    if picture:
+        temp = list(zip(*picture))[0]
+    if num in temp:
+        for i in range(len(picture)):
+            if picture[i][0] == num:
+                picture[i][1] += 1
+    else: # not in picture
+        count += 1
+        if len(picture) >= size:
+            picture.popleft()
+        picture.append([num, 1, count])
+    picture = deque(sorted(picture, key=lambda x:(x[1], x[2])))
+picture = sorted(picture)
+for a,b,c in picture:
+    print(a, end=" ")
 
-a = deque()
+n, m = int(input()), int(input())
+frames = dict()
 
-li = list(map(int, input().split()))
-for i in li:
-    print(a)
-    if len(a) < size and table[i] == 0:
-        a.append(i)
-    else: # len(a) == size
-        if table[i] == 0:
-            table[a.popleft()] = 0
-            a.append(i)
-        table[i] += 1
-        back(table, a, i)
-        swapByTable(table, a)
-print(a)
-print(table)
+cnt = 0
+for reco in map(int, input().split()):
+    if len(frames) >= n and not reco in frames:
+        del frames[min(frames, key=lambda x:frames[x])]
+    try: frames[reco][0] += 1
+    except:
+        frames[reco] = [1, cnt]
+        cnt += 1
+
+print(*sorted(frames.keys()))
+
+# table = []
+# # picture = []
+# picture = deque()
+#
+# for num in map(int, input().split()):
+#     if num in picture: # picture안에 있다
+#         for i in range(len(picture)):
+#             if picture[i] == num:
+#                 table[i] += 1
+#     else: # picture안에 없다
+#         if len(picture) >= size: # 없는데 full
+#             for i in range(len(table)): # table 가장 작고 인덱스 처음값 삭제
+#                 if min(table) == table[i]:
+#                     del table[i], picture[i]
+#                     break
+#         picture.append(num)
+#         table.append(1)
+# print(*sorted(picture))
+
+# for num in map(int, input().split()):
+#     if num in picture: # picture안에 있다
+#         for i in range(len(picture)):
+#             if picture[i] == num:
+#                 table[i] += 1
+#     else: # picture안에 없다
+#         if len(picture) >= size: # 없는데 full
+#             for i in range(len(table)): # table 가장 작고 인덱스 처음값 삭제
+#                 if min(table) == table[i]:
+#                     del table[i], picture[i]
+#                     break
+#         picture.append(num)
+#         table.append(1)
+# print(*sorted(picture))
+
+
+
 
 # table[2] = 1
 # table[3] = 4
