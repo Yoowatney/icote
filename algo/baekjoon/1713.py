@@ -1,60 +1,108 @@
+# n, m = int(input()), int(input())
+# frames = dict()
+#
+#
+# def test(x):
+#     print("=========")
+#     print(x)
+#     return frames[x]
+#
+# cnt = 0
+# for reco in map(int, input().split()):
+#     if len(frames) >= n and not reco in frames:
+#         print(frames)
+#         del frames[min(frames, key=test)]
+#     try: frames[reco][0] += 1
+#     except:
+#         frames[reco] = [1, cnt]
+#         cnt += 1
+# print(*sorted(frames.keys()))
+
+# def test(x):
+#     print("====")
+#     print(x)
+#     return (x)
+# b = [1,2,3,4]
+#
+
+# from typing import OrderedDict
+#
+#
+# a = {4: [3,0], 1 : [2, 2], 2 : [2, 0], 3 : [2, 0]}
+# print(sorted(a, key=lambda x:(a[x])))
+
+# order = OrderedDict()
+
+# order[3] = 1
+# order[4] = 2
+# order[5] = 3
+# order[6] = 4
+# print(order)
 
 
-# a = {2 : 4, 3 : 2, 1 : 4}
-# print(sorted(a.values()))
+# print(min(a, key=test))
 
-# a.sort(key=lambda x:(x.items()))
 
-# d = {i : 0 for i in range(1, 101)}
-# size = int(input())  # 3
-# int(input()) # 9
-# arr = list(map(int, input().split()))
-# for i in arr:
-#     d[i] = d[i] + 1
+# n, m = int(input()), int(input())
+# frames = dict()
+#
+# for reco in map(int, input().split()):
+#     if len(frames) >= n and not reco in frames:
+#         del frames[min(frames, key=lambda x:frames[x])]
+#     try: frames[reco][0] += 1
+#     except:
+#         frames[reco] = [1]
+#
+# print(*sorted(frames.keys()))
+#
+# print(min(a, key=lambda x: a[x]))
+
+
 # print(d)
-# sorted(d.items(), key=lambda item:item[1])
+# print(d.keys())
+
 
 # frame = [0 for _ in range(int(input()))]
 
-from collections import deque
-
-size = int(input())
-int(input())
-
-
-picture = deque()
-count = 0
-for num in map(int, input().split()):
-    temp = []
-    if picture:
-        temp = list(zip(*picture))[0]
-    if num in temp:
-        for i in range(len(picture)):
-            if picture[i][0] == num:
-                picture[i][1] += 1
-    else: # not in picture
-        count += 1
-        if len(picture) >= size:
-            picture.popleft()
-        picture.append([num, 1, count])
-    picture = deque(sorted(picture, key=lambda x:(x[1], x[2])))
-picture = sorted(picture)
-for a,b,c in picture:
-    print(a, end=" ")
-
-n, m = int(input()), int(input())
-frames = dict()
-
-cnt = 0
-for reco in map(int, input().split()):
-    if len(frames) >= n and not reco in frames:
-        del frames[min(frames, key=lambda x:frames[x])]
-    try: frames[reco][0] += 1
-    except:
-        frames[reco] = [1, cnt]
-        cnt += 1
-
-print(*sorted(frames.keys()))
+# from collections import deque
+#
+# size = int(input())
+# int(input())
+#
+#
+# picture = deque()
+# count = 0
+# for num in map(int, input().split()):
+#     temp = []
+#     if picture:
+#         temp = list(zip(*picture))[0]
+#     if num in temp:
+#         for i in range(len(picture)):
+#             if picture[i][0] == num:
+#                 picture[i][1] += 1
+#     else: # not in picture
+#         count += 1
+#         if len(picture) >= size:
+#             picture.popleft()
+#         picture.append([num, 1, count])
+#     picture = deque(sorted(picture, key=lambda x:(x[1], x[2])))
+# picture = sorted(picture)
+# for a,b,c in picture:
+#     print(a, end=" ")
+#
+# n, m = int(input()), int(input())
+# frames = dict()
+#
+# cnt = 0
+# for reco in map(int, input().split()):
+#     if len(frames) >= n and not reco in frames:
+#         del frames[min(frames, key=lambda x:frames[x])]
+#     try: frames[reco][0] += 1
+#     except:
+#         frames[reco] = [1, cnt]
+#         cnt += 1
+#
+# print(*sorted(frames.keys()))
 
 # table = []
 # # picture = []

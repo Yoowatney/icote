@@ -9,14 +9,46 @@
 # print(*a)
 #
 # print(zip(*a))
+def lower_bound(arr, num):
+    x = 0
+    upper = len(arr)
+    while x < upper:
+        mid = (x + upper) // 2
+        if arr[mid] < num:
+            x = mid + 1
+        else: # num <= mid
+            upper = mid
+    return x
 
-from collections import deque
+def upper_bound(arr, num):
+    x = 0
+    upper = len(arr)
+    while x < upper:
+        mid = (x + upper) // 2
+        if arr[mid] <= num:
+            x = mid + 1
+        else: # num < mid
+            upper = mid
+    return x
 
-b = [0] * 5
-b[3] = 1
-l = deque(zip(map(int, input().split()), b))
+print(format(1.5, '.0f'))
 
-print(l)
+print(round(4.6, 0))
+
+print(int(4.1 + 0.5))
+
+# print(lower_bound([1,2,3,3,3,4], 3))
+# print(upper_bound([1,2,3,3,3,4], 3))
+# print(sorted(l, key=lambda l:l.items()))
+
+# from collections import deque
+#
+# b = [0] * 5
+# b[3] = 1
+# l = deque(zip(map(int, input().split()), b))
+#
+# print(l)
+
 # _,a = map(int, input().split())
 # print(a)
 # print(*zip([1,2],[2,3],[3,4]))

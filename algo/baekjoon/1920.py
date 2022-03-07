@@ -24,3 +24,5 @@ for i in b:
 # nums = [0,1,2,4,5,6,7,8,9]
 # print(bisect_left(nums, 3))
 # print(bisect_right(nums, 3))
+
+
