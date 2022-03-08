@@ -16,11 +16,6 @@ for _ in range(int(input())):
     process()
 
 
-
-
-
-
-
 for _ in range(int(input())):
     a = []
     for s in input():

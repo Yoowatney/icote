@@ -3,6 +3,9 @@
 # s_a = sorted(a)
 # print(s_a)
 
+from collections import deque
+
+
 def lower_bound(arr, val):
     lo = 0
     hi = len(arr)
@@ -33,7 +36,7 @@ def lower_bound2(arr, val):
             hi = mid
     return lo
 
-print(lower_bound2([1,2,3,3,3,3,3,4,5], 3))
+# print(lower_bound2([1,2,3,3,3,3,3,4,5], 3))
 
 
 def upper_bound(arr, val):
@@ -47,4 +50,7 @@ def upper_bound(arr, val):
             lo = mid
     return lo + 1
         
-print(upper_bound([1,2,3,3,3,3,3,4,5], 3))
+# print(upper_bound([1,2,3,3,3,3,3,4,5], 3))
+
+a = deque(range(1,3))
+print(a)
