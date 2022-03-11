@@ -3,31 +3,28 @@ k, n = map(int, input().split())
 l = [int(input()) for _ in range(k)]
 l.sort()
 
-# _max = 0
-# try:
-#     for num in range(2, 1000000):
-#         temp = 0
-#         for i in l:
-#             temp += i // num
-#         if temp < n:
-#             raise Exception("!")
-#         elif temp == n:
-#             _max = num
-# except:
-#     print(_max)
+start, end = 1, l[-1]
 
-_max = 0
-a = 0
-try:
-    for num in range(1, l[0] + 1):
-        temp = 0
-        for i in l:
-            a += 1
-            temp += i // num
-        if temp >= n:
-            _max = num
-        elif temp < n:
-            raise Exception("!")
-except:
-    print(_max)
-    print(a)
+# while start <= end: # O(logN)
+#     mid = (start + end) // 2 # 중간 위치
+#     lines = 0 # 랜선 수
+#     for i in l: # O(K)
+#         lines += i // mid # 분할 된 랜선 수
+#        
+#     if lines >= n: # 랜선의 개수가 분기점
+#         start = mid + 1
+#     else:
+#         end = mid - 1
+# print(end)
+
+
+while start <= end: # 등호...
+    cnt = 0
+    mid = (start + end) // 2
+    for i in l:
+        cnt += i // mid
+    if cnt >= n:
+        start = mid + 1
+    else:
+        end = mid - 1
+print(end)

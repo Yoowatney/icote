@@ -9,33 +9,40 @@
 # print(*a)
 #
 # print(zip(*a))
-def lower_bound(arr, num):
-    x = 0
-    upper = len(arr)
-    while x < upper:
-        mid = (x + upper) // 2
-        if arr[mid] < num:
-            x = mid + 1
-        else: # num <= mid
-            upper = mid
-    return x
+import sys
 
-def upper_bound(arr, num):
-    x = 0
-    upper = len(arr)
-    while x < upper:
-        mid = (x + upper) // 2
-        if arr[mid] <= num:
-            x = mid + 1
-        else: # num < mid
-            upper = mid
-    return x
+print(int(sys.stdin.readline()))
+# l = [1, 2, 3, 5, 8, 22, 34, 55]
+# for index in range(0, len(l), 3):
+#     print(l, l[index])
 
-print(format(1.5, '.0f'))
-
-print(round(4.6, 0))
-
-print(int(4.1 + 0.5))
+# def lower_bound(arr, num):
+#     x = 0
+#     upper = len(arr)
+#     while x < upper:
+#         mid = (x + upper) // 2
+#         if arr[mid] < num:
+#             x = mid + 1
+#         else: # num <= mid
+#             upper = mid
+#     return x
+#
+# def upper_bound(arr, num):
+#     x = 0
+#     upper = len(arr)
+#     while x < upper:
+#         mid = (x + upper) // 2
+#         if arr[mid] <= num:
+#             x = mid + 1
+#         else: # num < mid
+#             upper = mid
+#     return x
+#
+# print(format(1.5, '.0f'))
+#
+# print(round(4.6, 0))
+#
+# print(int(4.1 + 0.5))
 
 # print(lower_bound([1,2,3,3,3,4], 3))
 # print(upper_bound([1,2,3,3,3,4], 3))
