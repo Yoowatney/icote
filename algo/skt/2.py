@@ -106,4 +106,4 @@ def solution(n, clockwise):
 from pprint import pprint
 pprint(solution(6, True))
 print()
-pprint(solution(6, False))
+pprint(solution(50, False))
