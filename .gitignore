@@ -1,5 +1,10 @@
 .vim
 tags
+*/*.txt
+*/*/*.txt
+*/test.py
+*/*/test.py
+
 algo/baekjoon/input.txt
 algo/baekjoon/output.txt
 algo/baekjoon/test.py
