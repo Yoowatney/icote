@@ -1,4 +1,3 @@
-
 region = { "Seoul" : 8346647, "Busan" : 2921510, "Daegu" : 2046714, "Incheon" : 2519225, "Gwangju" : 1209206,\
         "Daejeon" : 1233177, "Ulsan" : 942210, "Sejong" : 288895, "Gyeonggi" : 11433288, "Gangwon" : 1333621, \
         "Chungbook" : 1365033, "Chungnam" : 1796474,"Junbook" : 1533125, "Junnam" : 1581278 ,"Gyeongbook" : 2273028,\
