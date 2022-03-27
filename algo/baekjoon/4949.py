@@ -48,3 +48,4 @@ while True:
         a = [1]
     if a: print("no")
     else: print("yes")
+
