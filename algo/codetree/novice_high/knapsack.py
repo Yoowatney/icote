@@ -26,7 +26,6 @@ for i in range(2, 6):
             dp[i][j] = dp[i - 1][j]
 pprint(dp)
 
-
 # weight = [3, 1, 4, 5, 2]
 # price = [4, 1, 2, 6, 3]
 weight = [2, 6, 2, 3, 4]

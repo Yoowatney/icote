@@ -8,9 +8,8 @@
         "request": "launch",
         "program": "${workspaceRoot}/${fileBasename}",
         "stopOnEntry": true,
-        "console": "externalTerminal",
+        "console": "integratedTerminal",
         "cwd": "${workspaceRoot}",
-        "args": ["-i", "${workspaceRoot}/input.txt"],
         "variables": "1234"
       }
     },
@@ -23,7 +22,7 @@
         "protocol": "auto",
         "stopOnEntry": true,
         "console": "integratedTerminal",
-        "program": "${workspaceRoot}/test.js",
+        "program": "${workspaceRoot}/${fileBasename}",
         "cwd": "${workspaceRoot}"
       }
     }
