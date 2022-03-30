@@ -1,5 +1,3 @@
-from pprint import pprint
-
 total = 100
 n = int(input())
 dp = [[0] * 10 for _ in range(total)]

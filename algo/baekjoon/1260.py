@@ -1,6 +1,7 @@
 from collections import deque
 import sys
 
+
 n,m,k = map(int, input().split())
 
 g = [[] for _ in range(n + 1)]

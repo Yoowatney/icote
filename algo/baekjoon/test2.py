@@ -4,14 +4,17 @@
 #     [4, 5],
 #     [6, 7],
 #     [8, 9],
-# ]
+#
 #
 # print(*a)
 #
 # print(zip(*a))
-import sys
+from itertools import permutations
 
-print(int(sys.stdin.readline()))
+print(*permutations([1,2,3], 3))
+# import sys
+#
+# print(int(sys.stdin.readline()))
 # l = [1, 2, 3, 5, 8, 22, 34, 55]
 # for index in range(0, len(l), 3):
 #     print(l, l[index])

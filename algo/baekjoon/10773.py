@@ -8,3 +8,4 @@ for _ in range(int(input())):
     else:
         l.pop()
 print(sum(l))
+

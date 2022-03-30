@@ -8,3 +8,6 @@ if len(m) > 1:
     print(m[0] * m[-1])
 else:
     print(m[0] ** 2)
+
+
+
