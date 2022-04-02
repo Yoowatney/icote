@@ -2,10 +2,12 @@
 tags
 */.vimspector.json
 */*/.vimspector.json
+*/*/*/.vimspector.json
 
 test.py
 */test.py
 */*/test.py
+*/*/*/test.py
 
 baekjoon/test.py
 
