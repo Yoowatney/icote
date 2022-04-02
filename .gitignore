@@ -1,21 +1,12 @@
 .vim
 tags
-*/*.txt
-*/*/*.txt
+*/.vimspector.json
+*/*/.vimspector.json
+
+test.py
 */test.py
 */*/test.py
 
-algo/baekjoon/input.txt
-algo/baekjoon/output.txt
-algo/baekjoon/test.py
+baekjoon/test.py
 
-6_sort/input.txt
-6_sort/output.txt
-algo/skt/*
-algo/skt/input.txt
-algo/skt/output.txt.sb-17dab13d-48moU4
-algo/skt/output.txt
-
-algo/baekjoon/__pycache__/bisect.cpython-39.pyc
-
-algo/baekjoon/__pycache__
+skt/*
