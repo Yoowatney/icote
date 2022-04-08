@@ -2,8 +2,8 @@
 # 중복순열을 구하는 문제와 같다
 k, n = map(int, input().split())
 
-__import__('pprint').pprint([1,2,3])
 arr = [0] * n
+
 def choose(num):
     if num == n + 1:
         print(*arr)

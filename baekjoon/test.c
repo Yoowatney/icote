@@ -1,17 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
+int test()
+{
+	usleep(100000);
+	return 100;
+}
 int main(int argc, char *argv[])
 {
 	int n;
 
-	// printf("%d\n", scanf("%d", &n));
-	// exit(0);
 	n = 3;
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < test(); i++)
 	{
-		printf("n : %d\n", n);
-		scanf("%d", &n);
+		printf("Hi!!\n");
 	}
 	return 0;
 }

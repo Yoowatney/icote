@@ -9,6 +9,3 @@ def qsort(a):
     return qsort(left) + [pivot] + qsort(right)
 
 print(qsort(a))
-
-
-
