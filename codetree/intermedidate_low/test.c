@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+sam
+sam
+sam
 int main(int argc, char *argv[])
 {
 	int i = 0;
