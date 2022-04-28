@@ -2,6 +2,7 @@ total = 100
 n = int(input())
 dp = [[0] * 10 for _ in range(total)]
 
+
 for i in range(1, 10):
     dp[0][i] = 1
 
