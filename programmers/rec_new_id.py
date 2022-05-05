@@ -11,7 +11,9 @@ def solution(new_id:str)->str:
     answer = ""
     new_id = new_id.lower() # lv 1
     for i in new_id: # lv 2
+        # is alnum
         if i in 'abcdefghijklmnopqrstuvwxyz0123456789-_.':
+            # ∑´´ååßƒƒ©©
             answer += i
     l = len(answer)
     i = 0
@@ -24,6 +26,8 @@ def solution(new_id:str)->str:
                 i = idx
         ret += answer[i]
         i += 1
+    # while '..' in answer:
+    #     answer = answer.replace("..", ".")
     ret = ret.strip('.') # lv 4
     l = len(ret)
     if l == 0:
@@ -38,11 +42,14 @@ def solution(new_id:str)->str:
     return ret
 
 a = "=.="
+
 # for i in range(2):
 #     a += a[-1] 
 # a = ""
 # print(a.strip('.'))
-print(solution(a))
+# print(solution(a))
+
+print("œ".isalpha())
 
 # print(a)
 
@@ -53,8 +60,8 @@ print(solution(a))
 
 
 
-a = "a...b.c.d.e.f"
-while '..' in a:
-        a = a.replace('..', '.')
-        print(a)
-print(a)
+# a = "a...b.c.d.e.f"
+# while '..' in a:
+#         a = a.replace('..', '.')
+#         print(a)
+# print(a)
