@@ -11,7 +11,7 @@ def solution(numbers, hand):
         elif num in [3, 6, 9]:
             answer += 'R'
             right_x, right_y = (num - 1) // 3, (num - 1) % 3
-        else:
+        else: # 2,4,6,8
             x, y = (num - 1) // 3, (num - 1) % 3
             left = abs(left_x - x) + abs(left_y - y)
             right = abs(right_x - x)**2 + abs(right_y - y)**2
@@ -47,7 +47,6 @@ from collections import deque
 # 0 = 11
 # # = 12
 
-# 아래는 문제 잘못읽고 풀었습니다...
 dxs = [1, 0, -1, 0]
 dys = [0, -1, 0, 1]
 def is_range(x, y):

@@ -1,5 +1,3 @@
-from collections import defaultdict
-
 def solution(id_list, report, k):
     answer = []
     report_count = dict()

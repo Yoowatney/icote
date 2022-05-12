@@ -14,5 +14,3 @@ def solution(n):
 # primes = get_primes()
 # print(primes.count(True))
 print(solution(n))
-
-
